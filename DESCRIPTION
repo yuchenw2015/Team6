@@ -13,3 +13,10 @@ LazyData: true
 URL: https://github.com/yuchenw2015/Team6
 BugReports: https://github.com/yuchenw2015/Team6/issues
 RoxygenNote: 6.1.1
+imports: 
+    purrr,
+    sf, 
+    dplyr,
+    tidyr
+Imports: 
+    magrittr
