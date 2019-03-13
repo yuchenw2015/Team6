@@ -11,6 +11,6 @@ team_3 <- function(file, tolerance = 0.1){
   con_plus <- con$geometry %>% flatten() %>% flatten() %>% lapply(., as.data.frame) %>% bind_rows() %>% rename(., c("x" = "long", "y" = "lat"))
   temp <- con$geometry %>% flatten() %>% flatten() %>% lapply(., nrow) %>% unlist
   con_plus$group <- rep(1 : length(temp), temp)
-  list(country = con$NAME_0[1], polygon = con_plus)
-  return(con_plus)
+
+  return(list(country = con$NAME_0[1], polygon = con_plus))
 }
