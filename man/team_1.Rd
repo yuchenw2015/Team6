@@ -19,7 +19,7 @@ Plot a country shape with .shp file.
 }
 \examples{
 #See details about this example data with ?gadm36_AUS_1.shp
-fp <- "./data/gadm36_AUS_shp/gadm36_AUS_1.shp"
+fp <- paste(getwd(), "/data_raw/gadm36_AUS_shp/gadm36_AUS_1.shp", sep = "")
 team_1(fp)
 team_1(fp, 0.3)
 }

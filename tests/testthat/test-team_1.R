@@ -1,12 +1,9 @@
 context("test-team_1")
-library(testthat)
-library(sf)
-library(tidyverse)
-library(purrr)
-t1 <- team_1(file = paste(getwd(),"/gadm36_AUS_shp/gadm36_AUS_1.shp", sep = ""), 0.2)
+
+t1 <- team_1(file = paste(getwd(),"/../../data_raw/gadm36_AUS_shp/gadm36_AUS_1.shp", sep = ""), 0.2)
 test_that("team_1 function works", {
-  expect_error(team_1(file = paste(getwd(),"/gadm36_AUS_shp/gadm36_AUS_1.shx", sep = "")))
-  expect_error(team_1(file = paste(getwd(),"/gadm36_AUS_shp/gadm36_AUS_1.shp", sep = ""), 0.1, 0.1))
+  expect_error(team_1(file = paste(getwd(),"/../../data/gadm36_AUS_shp/gadm36_AUS_1.shx", sep = "")))
+  expect_error(team_1(file = paste(getwd(),"/../../data/gadm36_AUS_shp/gadm36_AUS_1.shp", sep = ""), 0.1, 0.1))
   expect_true(is.list(t1))
   expect_true(is.data.frame(t1$polygon))
   expect_true(is.vector(t1$country))

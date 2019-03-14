@@ -6,7 +6,7 @@
 #' @return A list includes a vector of country name, a vector of the states name, and a data frame of the polygon longitudes and latitudes.
 #' @examples
 #' #See details about this example data with ?gadm36_AUS_1.shp
-#' fp <- "./data/gadm36_AUS_shp/gadm36_AUS_1.shp"
+#' fp <- paste(getwd(), "/data_raw/gadm36_AUS_shp/gadm36_AUS_1.shp", sep = "")
 #' team_1(fp)
 #' team_1(fp, 0.3)
 
