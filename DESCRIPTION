@@ -19,6 +19,7 @@ imports:
     dplyr,
     tidyr,
     maptools,
+    class,
     assertthat
 Imports: 
     magrittr

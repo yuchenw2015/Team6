@@ -5,12 +5,11 @@
 #' @export
 #' @return A list includes a vector of country name, a vector of the states name, and a data frame of the polygon longitudes and latitudes.
 #' @examples
-#' #See details about this example data with ?gadm36_AUS_1.shp
-#' fp <- paste(getwd(), "/data_raw/gadm36_AUS_shp/gadm36_AUS_1.shp", sep = "")
-#' team_1(fp)
-#' team_1(fp, 0.3)
+#' #Find the the path "fp" of your own shp file, then call team_1(fp) or team_(fp, 0.2)
+
 
 team_1 <- function(file, tolerance = 0.1){
+  library(class)
   file_format <- substr(file, nchar(file) - 2, nchar(file))
   assertthat::assert_that(file_format == "shp", msg = "The file is not .shp format!")
   ozbig <- sf::read_sf(file)
