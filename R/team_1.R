@@ -9,7 +9,6 @@
 
 
 team_1 <- function(file, tolerance = 0.1){
-  library(class)
   file_format <- substr(file, nchar(file) - 2, nchar(file))
   assertthat::assert_that(file_format == "shp", msg = "The file is not .shp format!")
   ozbig <- sf::read_sf(file)

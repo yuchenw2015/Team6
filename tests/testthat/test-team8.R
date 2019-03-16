@@ -1,0 +1,12 @@
+context("test-team_8")
+t1 <- team_8(paste(getwd(),"/../../data_raw/gadm36_AUS_shp/gadm36_AUS_1.shp",sep = ""),0.2)
+test_that("team_8 function works", {
+  expect_error(team_8(paste(getwd(),"/../../data_raw/gadm36_AUS_shp/gadm36_AUS_1.shp",sep = ""),0.2, 0.1))
+  expect_error(team_8(paste(getwd(),"/../../data_raw/gadm36_AUS_shp/gadm36_AUS_1.shx",sep = "")))
+  expect_true(is.list(t1))
+  expect_true(is.data.frame(t1$polygon))
+  expect_true(is.vector(t1$country))
+  expect_true(is.vector(t1$polygon$group))
+  expect_true(is.numeric(t1$polygon$long))
+  expect_true(is.numeric(t1$polygon$lat))
+})
